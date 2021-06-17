@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/homeFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_navbar_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/activitiesFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_navbar_transactions"
+        android:title="Activities" />
+    <item
+        android:id="@+id/action_add"
+        android:enabled="false"
+        android:title="Add"
+         />
+    <item
+        android:id="@+id/optionsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_navbar_options"
+        android:title="Options" />
+    <item
+        android:id="@+id/toolsFragment"
+        android:enabled="true"
+        android:icon="@drawable/ic_navbar_calculate"
+        android:title="Tools" />
+</menu>

@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ProgressBar
+        android:id="@+id/pbBalanceBar"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_margin="20dp"
+        android:progress="10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvPercentageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10%"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/pbBalanceBar"
+        app:layout_constraintEnd_toEndOf="@id/pbBalanceBar"
+        app:layout_constraintStart_toStartOf="@id/pbBalanceBar"
+        app:layout_constraintTop_toTopOf="@id/pbBalanceBar" />
+
+    <TextView
+        android:id="@+id/tvBalanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="Balance :"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/tvBalanceValue"
+        app:layout_constraintStart_toEndOf="@id/pbBalanceBar"
+        app:layout_constraintTop_toTopOf="@id/pbBalanceBar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvBalanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="P 100,000,000"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/pbBalanceBar"
+        app:layout_constraintStart_toEndOf="@id/pbBalanceBar"
+        app:layout_constraintTop_toBottomOf="@id/tvBalanceLabel" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintBottom_toBottomOf="@id/pbBalanceBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pbBalanceBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+            
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="March"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvYear"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2021"
+                android:textAllCaps="true"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvDate"
+                app:layout_constraintTop_toBottomOf="@id/tvDate" />
+
+            <ImageView
+                android:id="@+id/ivCalendatIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvDate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <!--<TextView
+        android:id="@+id/tvBalanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Balance :"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tvBalanceValue"
+        app:layout_constraintStart_toEndOf="@id/pbBalanceBar"
+        app:layout_constraintTop_toTopOf="@id/pbBalanceBar"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <TextView
+        android:id="@+id/tvBalanceValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="P 100,000,000"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/pbBalanceBar"
+        app:layout_constraintStart_toEndOf="@id/pbBalanceBar"
+        app:layout_constraintTop_toBottomOf="@id/tvBalanceLabel" />
+
+    <TextView
+        android:id="@+id/tvPercentageLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Percentage Saved"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toTopOf="@id/tvPercentageValue"
+        app:layout_constraintStart_toStartOf="@id/tvPercentageValue"
+        app:layout_constraintEnd_toEndOf="@id/tvPercentageValue"
+         />
+
+    <TextView
+        android:id="@+id/tvPercentageValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+50%"
+        android:textSize="20sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/tvBalanceValue"
+        app:layout_constraintBottom_toBottomOf="@id/tvBalanceValue"
+        app:layout_constraintEnd_toEndOf="parent" />-->
+
+    <TextView
+        android:id="@+id/tvItemTitleFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:text="Summary"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/pbBalanceBar" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItemContentFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvItemTitleFirst">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvItemTitleSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:text="Expenses"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cvItemContentFirst" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="2dp"
+        android:text="Total : "
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvItemTotalSecond"
+        app:layout_constraintEnd_toStartOf="@id/tvItemTotalSecond"
+        app:layout_constraintTop_toTopOf="@id/tvItemTotalSecond" />
+
+    <TextView
+        android:id="@+id/tvItemTotalSecond"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:text="P 100,000,000"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvItemTitleSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvItemTitleSecond" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItemContentSecond"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvItemTitleSecond">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/tvColumnHeader1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Planned"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/tvColumnHeader2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvColumnHeader2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Actual"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDataList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:listitem="@layout/item_data_layout"
+                app:layout_constraintTop_toBottomOf="@id/tvColumnHeader1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvItemTitleThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:text="Income"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cvItemContentSecond" />
+
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:padding="2dp"
+        android:text="Total : "
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@id/tvItemTotalThird"
+        app:layout_constraintEnd_toStartOf="@id/tvItemTotalThird"
+        app:layout_constraintTop_toTopOf="@id/tvItemTotalThird" />
+
+    <TextView
+        android:id="@+id/tvItemTotalThird"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="5dp"
+        android:text="P 100,000,000"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tvItemTitleThird"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvItemTitleThird" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvItemContentThird"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvItemTitleThird">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp">
+
+            <TextView
+                android:id="@+id/tvIncomeColumnHeader1"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Planned"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toStartOf="@id/tvIncomeColumnHeader2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvIncomeColumnHeader2"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="Actual"
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvIncomeDataList"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                tools:listitem="@layout/item_data_layout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvIncomeColumnHeader1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.activities.ActivitiesFragment">
+
+
+    <TextView
+        android:id="@+id/tvOptionsLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:text="List Options :"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/llOptionsContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tvOptionsLabel"
+        app:layout_constraintTop_toBottomOf="@id/tvOptionsLabel">
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Expense" />
+
+        <CheckBox
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="Income" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvListDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvListDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="March"
+                android:textAllCaps="true"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/tvListYear"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvListYear"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2021"
+                android:textAllCaps="true"
+                android:textSize="8sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@id/tvListDate"
+                app:layout_constraintTop_toBottomOf="@id/tvListDate" />
+
+            <ImageView
+                android:id="@+id/ivListCalendarIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="2dp"
+                android:src="@drawable/ic_calendar"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/tvListDate"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvColumnHeaderId"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="ID"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvColumnHeaderDescription"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvColumnHeaderDescription" />
+
+    <TextView
+        android:id="@+id/tvColumnHeaderDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Description"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@id/tvColumnHeaderSortValue"
+        app:layout_constraintStart_toEndOf="@id/tvColumnHeaderId"
+        app:layout_constraintTop_toBottomOf="@id/cvListDate" />
+
+    <TextView
+        android:id="@+id/tvColumnHeaderSortValue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="2dp"
+        android:text="Price"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tvColumnHeaderDescription"
+        app:layout_constraintTop_toTopOf="@id/tvColumnHeaderDescription" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvActivityList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/tvColumnHeaderDescription"
+        tools:listitem="@layout/item_activity_layout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
