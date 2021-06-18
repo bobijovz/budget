@@ -2,20 +2,21 @@ package com.bobijovz.budget.presentation
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.navigation.Navigation
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.bobijovz.budget.R
-import kotlinx.android.synthetic.main.activity_container.*
+import com.bobijovz.budget.databinding.ActivityContainerBinding
+
 
 class ContainerActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_container)
+        val binding = ActivityContainerBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val navHostFragment = supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
-        bottomNavigation.setupWithNavController(navHostFragment.navController)
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragmentContainerView) as NavHostFragment
+        binding.bottomNavigation.setupWithNavController(navHostFragment.navController)
 
     }
 

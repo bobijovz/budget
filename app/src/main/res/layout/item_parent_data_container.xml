@@ -110,55 +110,6 @@
 
     </androidx.cardview.widget.CardView>
 
-
-    <!--<TextView
-        android:id="@+id/tvBalanceLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Balance :"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        app:layout_constraintBottom_toTopOf="@id/tvBalanceValue"
-        app:layout_constraintStart_toEndOf="@id/pbBalanceBar"
-        app:layout_constraintTop_toTopOf="@id/pbBalanceBar"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <TextView
-        android:id="@+id/tvBalanceValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:text="P 100,000,000"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/pbBalanceBar"
-        app:layout_constraintStart_toEndOf="@id/pbBalanceBar"
-        app:layout_constraintTop_toBottomOf="@id/tvBalanceLabel" />
-
-    <TextView
-        android:id="@+id/tvPercentageLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Percentage Saved"
-        android:textSize="10sp"
-        app:layout_constraintBottom_toTopOf="@id/tvPercentageValue"
-        app:layout_constraintStart_toStartOf="@id/tvPercentageValue"
-        app:layout_constraintEnd_toEndOf="@id/tvPercentageValue"
-         />
-
-    <TextView
-        android:id="@+id/tvPercentageValue"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+50%"
-        android:textSize="20sp"
-        android:textAllCaps="true"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@id/tvBalanceValue"
-        app:layout_constraintBottom_toBottomOf="@id/tvBalanceValue"
-        app:layout_constraintEnd_toEndOf="parent" />-->
-
     <TextView
         android:id="@+id/tvItemTitleFirst"
         android:layout_width="match_parent"
@@ -207,12 +158,12 @@
         android:padding="2dp"
         android:text="Total : "
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/tvItemTotalSecond"
-        app:layout_constraintEnd_toStartOf="@id/tvItemTotalSecond"
-        app:layout_constraintTop_toTopOf="@id/tvItemTotalSecond" />
+        app:layout_constraintBottom_toBottomOf="@id/tvItemExpenseTotal"
+        app:layout_constraintEnd_toStartOf="@id/tvItemExpenseTotal"
+        app:layout_constraintTop_toTopOf="@id/tvItemExpenseTotal" />
 
     <TextView
-        android:id="@+id/tvItemTotalSecond"
+        android:id="@+id/tvItemExpenseTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -294,12 +245,12 @@
         android:padding="2dp"
         android:text="Total : "
         android:textSize="10sp"
-        app:layout_constraintBottom_toBottomOf="@id/tvItemTotalThird"
-        app:layout_constraintEnd_toStartOf="@id/tvItemTotalThird"
-        app:layout_constraintTop_toTopOf="@id/tvItemTotalThird" />
+        app:layout_constraintBottom_toBottomOf="@id/tvItemIncomeTotal"
+        app:layout_constraintEnd_toStartOf="@id/tvItemIncomeTotal"
+        app:layout_constraintTop_toTopOf="@id/tvItemIncomeTotal" />
 
     <TextView
-        android:id="@+id/tvItemTotalThird"
+        android:id="@+id/tvItemIncomeTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
