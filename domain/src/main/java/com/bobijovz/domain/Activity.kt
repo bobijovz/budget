@@ -1,4 +1,4 @@
-package com.bobijovz.budget.domain
+package com.bobijovz.domain
 
 data class Activity(
     val id: String,

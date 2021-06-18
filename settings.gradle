@@ -1,3 +1,4 @@
 rootProject.name = "Budget"
 include ':app'
 include ':data'
+include ':domain'

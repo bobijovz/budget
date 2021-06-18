@@ -32,6 +32,7 @@ android {
 }
 
 dependencies {
+    implementation project(":domain")
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'androidx.core:core-ktx:1.5.0'
@@ -40,4 +41,13 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    // Koin AndroidX Scope features
+    implementation "io.insert-koin:koin-androidx-scope:$koin_version"
+// Koin AndroidX ViewModel features
+    implementation "io.insert-koin:koin-androidx-viewmodel:$koin_version"
+// Koin AndroidX Fragment features
+    implementation "io.insert-koin:koin-androidx-fragment:$koin_version"
+// Koin AndroidX Experimental features
+    implementation "io.insert-koin:koin-androidx-ext:$koin_version"
 }

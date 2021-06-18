@@ -1,4 +1,4 @@
-package com.bobijovz.budget.domain
+package com.bobijovz.domain
 
 data class Category(
     val categoryid: String,

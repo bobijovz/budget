@@ -1,8 +1,8 @@
-package com.bobijovz.budget.data
+package com.bobijovz.data.repository
 
-import com.bobijovz.budget.domain.Activity
-import com.bobijovz.budget.domain.BudgetRepository
-import com.bobijovz.budget.domain.Category
+import com.bobijovz.domain.Activity
+import com.bobijovz.domain.BudgetRepository
+import com.bobijovz.domain.Category
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 
@@ -27,10 +27,10 @@ class BudgetRepositoryImpl : BudgetRepository {
     override fun getCategories(): Flow<List<Category>> = flow {
         emit(
             listOf(
-                Category("1","Food",1000.00),
-                Category("2","Utilities",2000.00),
-                Category("3","Personal",3000.00),
-                Category("4","Savings",4000.00)
+                Category("1", "Food", 1000.00),
+                Category("2", "Utilities", 2000.00),
+                Category("3", "Personal", 3000.00),
+                Category("4", "Savings", 4000.00)
             )
         )
     }

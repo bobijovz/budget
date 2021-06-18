@@ -1,6 +1,7 @@
-package com.bobijovz.budget.domain
+package com.bobijovz.domain
 
 import kotlinx.coroutines.flow.Flow
+
 
 interface BudgetRepository {
     fun getActivities() : Flow<List<Activity>>

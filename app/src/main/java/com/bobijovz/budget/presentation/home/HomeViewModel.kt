@@ -2,7 +2,7 @@ package com.bobijovz.budget.presentation.home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bobijovz.budget.domain.interactor.GetExpenses
+import com.bobijovz.domain.interactor.GetExpenses
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -27,6 +27,5 @@ class HomeViewModel(val getExpenses: GetExpenses) : ViewModel() {
             }
         }
     }
-
-
 }
+

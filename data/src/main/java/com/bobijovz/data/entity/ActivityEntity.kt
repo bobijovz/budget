@@ -1,4 +1,4 @@
-package com.bobijovz.budget.data
+package com.bobijovz.data.entity
 
 data class ActivityEntity(
     val id: String,
