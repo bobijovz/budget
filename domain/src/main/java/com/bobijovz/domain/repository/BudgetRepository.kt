@@ -1,5 +1,7 @@
-package com.bobijovz.domain
+package com.bobijovz.domain.repository
 
+import com.bobijovz.domain.model.Activity
+import com.bobijovz.domain.model.Category
 import kotlinx.coroutines.flow.Flow
 
 

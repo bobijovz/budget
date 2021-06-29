@@ -1,8 +1,9 @@
-package com.bobijovz.domain
+package com.bobijovz.domain.model
 
 data class Activity(
     val id: String,
     val categoryId: String,
     val description: String,
+    val type: String,
     val price: Double
 )
