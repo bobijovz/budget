@@ -11,7 +11,7 @@
         android:gravity="center"
         android:padding="2dp"
         android:text="001"
-        android:textSize="10sp"
+
         app:layout_constraintEnd_toStartOf="@id/tvColumnCategory"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/tvColumnDescription"
@@ -19,13 +19,14 @@
 
     <TextView
         android:id="@+id/tvColumnCategory"
-        android:layout_width="wrap_content"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:gravity="end"
         android:padding="2dp"
-        android:textStyle="italic"
+        android:textStyle="italic|bold"
+        android:textSize="12sp"
+        android:lines="1"
         android:text="Category "
-        android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@id/tvColumnDescription"
         app:layout_constraintStart_toEndOf="@id/tvColumnId"
         app:layout_constraintTop_toTopOf="@id/tvColumnDescription"
@@ -39,7 +40,6 @@
         android:padding="2dp"
         android:lines="2"
         android:text="Description asdfasd asdfasd fas asdfa sdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asdf asd "
-        android:textSize="10sp"
         app:layout_constraintEnd_toStartOf="@id/tvColumnValue"
         app:layout_constraintStart_toEndOf="@id/tvColumnCategory"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,7 +51,6 @@
         android:gravity="right"
         android:padding="2dp"
         android:text="P 1,000,000"
-        android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tvColumnDescription"
         app:layout_constraintTop_toTopOf="@id/tvColumnDescription"

@@ -8,4 +8,5 @@ import kotlinx.coroutines.flow.Flow
 interface BudgetRepository {
     fun getActivities() : Flow<List<Activity>>
     fun getCategories() : Flow<List<Category>>
+    fun addActivity(data: Activity)
 }

@@ -7,22 +7,22 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.bobijovz.budget.presentation.home.HomeFragment"
+        android:name="com.bobijovz.kalupi.presentation.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/activitiesFragment"
-        android:name="com.bobijovz.budget.presentation.activities.ActivitiesFragment"
+        android:name="com.bobijovz.kalupi.presentation.activities.ActivitiesFragment"
         android:label="fragment_activities"
         tools:layout="@layout/fragment_activities" />
     <fragment
         android:id="@+id/optionsFragment"
-        android:name="com.bobijovz.budget.presentation.options.OptionsFragment"
+        android:name="com.bobijovz.kalupi.presentation.options.OptionsFragment"
         android:label="fragment_options"
         tools:layout="@layout/fragment_options" />
     <fragment
         android:id="@+id/toolsFragment"
-        android:name="com.bobijovz.budget.presentation.tools.ToolsFragment"
+        android:name="com.bobijovz.kalupi.presentation.tools.ToolsFragment"
         android:label="fragment_tools"
         tools:layout="@layout/fragment_tools" />
 </navigation>

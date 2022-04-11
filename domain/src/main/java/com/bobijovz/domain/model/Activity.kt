@@ -5,5 +5,5 @@ data class Activity(
     val categoryId: String,
     val description: String,
     val type: String,
-    val price: Double
-)
+    val price: Double,
+    val timestamp: Long)

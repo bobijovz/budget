@@ -27,6 +27,6 @@ class GetExpenses(private val budgetRepository: BudgetRepository) {
                             groupActivity.value.map { value -> value.price }.sum()
                         )
                     }
-            }
+            } 
     }
 }

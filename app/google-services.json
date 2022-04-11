@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "139132230761",
+    "firebase_url": "https://bobijovz-budget-app-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bobijovz-budget-app",
+    "storage_bucket": "bobijovz-budget-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:139132230761:android:4493ff56dd9bba1f3096f8",
+        "android_client_info": {
+          "package_name": "com.bobijovz.kalupi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "139132230761-qdm23rcjjpgp6vk5oivoe74r0fnkb17r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.bobijovz.kalupi",
+            "certificate_hash": "60d05f7212920314657e4369704dc37585b8af4c"
+          }
+        },
+        {
+          "client_id": "139132230761-0g1pnjmqppl60ur12thsstbm67a0l3q0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwVA7viNEJs2YZhTsVvKQMRJYAu2NdbpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "139132230761-0g1pnjmqppl60ur12thsstbm67a0l3q0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
