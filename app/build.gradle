@@ -38,6 +38,7 @@ android {
 dependencies {
     def nav_version = "2.3.5"
     def lifecycle_version = "2.3.1"
+    def room_version = "2.4.3"
 
     implementation project(":data")
     implementation project(":domain")
@@ -77,6 +78,9 @@ dependencies {
     implementation "io.insert-koin:koin-androidx-fragment:$koin_version"
 // Koin AndroidX Experimental features
     implementation "io.insert-koin:koin-androidx-ext:$koin_version"
+
+    implementation "androidx.room:room-runtime:$room_version"
+    annotationProcessor "androidx.room:room-compiler:$room_version"
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'

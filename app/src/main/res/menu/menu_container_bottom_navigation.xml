@@ -9,7 +9,7 @@
         android:id="@+id/activitiesFragment"
         android:enabled="true"
         android:icon="@drawable/ic_navbar_transactions"
-        android:title="Activities" />
+        android:title="Logs" />
     <item
         android:id="@+id/action_add"
         android:enabled="false"
