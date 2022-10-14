@@ -1,8 +1,8 @@
-package com.bobijovz.kalupi.presentation.activities
+package com.bobijovz.kalupi.presentation.records
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.bobijovz.domain.interactor.GetActivities
+import com.bobijovz.domain.interactor.GetRecords
 import com.bobijovz.domain.interactor.GetCategories
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -10,19 +10,19 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 
-class ActivitiesViewModel(val getCategories: GetCategories, val getActivities: GetActivities) : ViewModel() {
+class RecordsViewModel(val getCategories: GetCategories, val getRecords: GetRecords) : ViewModel() {
 
-    private val mActivityModel = MutableStateFlow(emptyList<ActivityModel>())
+    private val mRecordModel = MutableStateFlow(emptyList<RecordModel>())
     private val mCategoryModel = MutableStateFlow(emptyList<CategoryModel>())
-    val activityModel: StateFlow<List<ActivityModel>> = mActivityModel
+    val recordModel: StateFlow<List<RecordModel>> = mRecordModel
     val categoryModel: StateFlow<List<CategoryModel>> = mCategoryModel
 
 
     fun loadActivities() {
         viewModelScope.launch(Dispatchers.IO) {
-            getActivities.execute().collect { activities ->
-                mActivityModel.value = activities.map {
-                    ActivityModel(
+            getRecords.execute().collect { activities ->
+                mRecordModel.value = activities.map {
+                    RecordModel(
                         id = it.id,
                         category = it.categoryId,
                         description = it.description,

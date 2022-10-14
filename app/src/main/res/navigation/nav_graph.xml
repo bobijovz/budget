@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/activitiesFragment"
-        android:name="com.bobijovz.kalupi.presentation.activities.ActivitiesFragment"
+        android:name="com.bobijovz.kalupi.presentation.records.RecordsFragment"
         android:label="fragment_activities"
         tools:layout="@layout/fragment_activities" />
     <fragment

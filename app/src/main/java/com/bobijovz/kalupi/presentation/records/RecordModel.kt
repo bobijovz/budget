@@ -1,6 +1,6 @@
-package com.bobijovz.kalupi.presentation.activities
+package com.bobijovz.kalupi.presentation.records
 
-data class ActivityModel(
+data class RecordModel(
     val id: String,
     val category: String,
     val description: String,

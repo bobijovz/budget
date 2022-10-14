@@ -1,4 +1,4 @@
-package com.bobijovz.kalupi.presentation.activities
+package com.bobijovz.kalupi.presentation.records
 
 data class CategoryModel(
     val categoryId: String,

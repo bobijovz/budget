@@ -1,4 +1,4 @@
-package com.bobijovz.kalupi.presentation.activities
+package com.bobijovz.kalupi.presentation.records
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bobijovz.kalupi.databinding.ItemActivityLayoutBinding
 
 
-class ActivitiesAdapter : RecyclerView.Adapter<ActivitiesAdapter.ViewHolder>() {
-    private var items: List<ActivityModel> = emptyList()
+class RecordsAdapter : RecyclerView.Adapter<RecordsAdapter.ViewHolder>() {
+    private var items: List<RecordModel> = emptyList()
 
     class ViewHolder(val binding: ItemActivityLayoutBinding) : RecyclerView.ViewHolder(binding.root)
 
@@ -33,7 +33,7 @@ class ActivitiesAdapter : RecyclerView.Adapter<ActivitiesAdapter.ViewHolder>() {
         return items.size
     }
 
-    fun updateData(items: List<ActivityModel>) {
+    fun updateData(items: List<RecordModel>) {
         this.items = items
         notifyDataSetChanged()
     }

@@ -1,6 +1,6 @@
 package com.bobijovz.domain.model
 
-data class Activity(
+data class Record(
     val id: String,
     val categoryId: String,
     val description: String,

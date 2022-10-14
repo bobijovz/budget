@@ -1,7 +1,7 @@
 package com.bobijovz.kalupi
 
 import android.app.Application
-import com.bobijovz.kalupi.presentation.activities.ActivitiesModule
+import com.bobijovz.kalupi.presentation.records.RecordsModule
 import com.bobijovz.kalupi.presentation.home.HomeModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
@@ -15,7 +15,7 @@ class BudgetApplication : Application() {
         startKoin {
             androidLogger()
             androidContext(this@BudgetApplication)
-            modules(HomeModule.dependencies, ActivitiesModule.dependencies)
+            modules(HomeModule.dependencies, RecordsModule.dependencies)
         }
 
     }
